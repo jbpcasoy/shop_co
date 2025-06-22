@@ -3,6 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CategoriesModule } from './categories/categories.module';
+import { Category } from './categories/entities/category.entity';
 import { Product } from './products/entities/product.entity';
 import { ProductsModule } from './products/products.module';
 
@@ -20,12 +22,13 @@ import { ProductsModule } from './products/products.module';
         username: configService.get('DATABASE_USER'),
         password: configService.get('DATABASE_PASS'),
         database: configService.get('DATABASE_NAME'),
-        entities: [Product],
+        entities: [Product, Category],
         synchronize: true,
       }),
       inject: [ConfigService],
     }),
     ProductsModule,
+    CategoriesModule,
   ],
 
   controllers: [AppController],
