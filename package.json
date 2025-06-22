@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.17",
     "turbo": "^2.5.4",
     "typescript": "5.8.2"
   },
@@ -19,7 +21,8 @@
   "packageManager": "npm@10.5.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "tools/*"
   ],
   "dependencies": {
     "@nestjs/config": "^4.0.2",
