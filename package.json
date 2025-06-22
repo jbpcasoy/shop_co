@@ -20,5 +20,12 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/swagger": "^11.2.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "swagger-ui-express": "^5.0.1"
+  }
 }

@@ -96,3 +96,17 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## 📦 Environment Variables
+The app uses environment variables stored in .env files.
+
+🔹 Default
+The default .env file should define the following:
+
+```env
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_USER=postgres
+DATABASE_PASS=yourpassword
+DATABASE_NAME=yourdbname
+```
