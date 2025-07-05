@@ -7,6 +7,8 @@ import { CategoriesModule } from './categories/categories.module';
 import { Category } from './categories/entities/category.entity';
 import { Product } from './products/entities/product.entity';
 import { ProductsModule } from './products/products.module';
+import { User } from './users/entities/user.entity';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -22,13 +24,14 @@ import { ProductsModule } from './products/products.module';
         username: configService.get('DATABASE_USER'),
         password: configService.get('DATABASE_PASS'),
         database: configService.get('DATABASE_NAME'),
-        entities: [Product, Category],
+        entities: [Product, Category, User],
         synchronize: true,
       }),
       inject: [ConfigService],
     }),
     ProductsModule,
     CategoriesModule,
+    UsersModule,
   ],
 
   controllers: [AppController],
